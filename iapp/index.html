@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="poe/characters/getAccountCharacters.js"></script>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -9,5 +10,11 @@
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+
+
+    <br><br>Search for characters on an account, e.g. Arzka <br>
+    <input type="text" id="characterField" placeholder="Account name">
+    <button type="button" onclick="httpAPIRequest()">Search</button>
+    <div id="characterDiv">
   </body>
 </html>
