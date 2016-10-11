@@ -36,13 +36,17 @@ function printResponse(data, error)
   }
   else
   {
-    div.innerHTML = "";
+    div.innerHTML = " ";
     for (var character in data)
     {
-      div.innerHTML += "Name: " + data[character].name + " " +
-                       "Class: " + data[character].class + " " +
-                       "Level: " + data[character].level + " " +
-                       "League: " + data[character].league + '<br>';
+      div.innerHTML += '<li class="list-group-item active">' +
+                       "Name: " + data[character].name + '</li>' +
+                       '<li class="list-group-item">' +
+                       "Class: " + data[character].class + '</li>' +
+                       '<li class="list-group-item">' +
+                       "Level: " + data[character].level + '</li>' +
+                       '<li class="list-group-item">' +
+                       "League: " + data[character].league + '</li>';
     }
   }
 }
