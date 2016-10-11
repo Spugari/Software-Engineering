@@ -1,0 +1,14 @@
+.jumbotron.text-center
+  h1 iApp
+  p.text-muted As shitty as it gets
+.container
+  .row
+    form
+      .form-group
+        label(for="charName") Character Name
+        input(type="text" placeholder="Enter an account name e.g. Arzka").form-control#characterField
+      button(type="button" onclick="httpAPIRequest()").btn.btn-primary
+        span.glyphicon.glyphicon-search
+        |  Search
+  .row
+    div#characterDiv

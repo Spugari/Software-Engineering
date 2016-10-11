@@ -1,20 +1,33 @@
-<!DOCTYPE html>
-<script src="poe/characters/getAccountCharacters.js"></script>
-<html>
+
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="gui/frameworks/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="resources/css/style.css"/>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-
-
-    <br><br>Search for characters on an account, e.g. Arzka <br>
-    <input type="text" id="characterField" placeholder="Account name">
-    <button type="button" onclick="httpAPIRequest()">Search</button>
-    <div id="characterDiv">
-  </body>
 </html>
+<body>
+  <div class="jumbotron text-center">
+    <h1>iApp</h1>
+    <p class="text-muted">As shitty as it gets</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="form-group">
+          <label for="charName">Character Name</label>
+          <input type="text" placeholder="Enter an account name e.g. Arzka" id="characterField" class="form-control"/>
+        </div>
+        <button type="button" onclick="httpAPIRequest()" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button>
+      </form>
+    </div>
+    <div class="row">
+      <div id="characterDiv"></div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="gui/frameworks/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="poe/characters/getAccountCharacters.js"></script>
+</body>
